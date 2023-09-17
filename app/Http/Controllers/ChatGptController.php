@@ -18,7 +18,6 @@ class ChatGptController extends Controller
         return view('chat');
     }
 
-
     /**
      * chat
      *
@@ -39,7 +38,6 @@ class ChatGptController extends Controller
 
         return view('chat', compact('sentence', 'chat_response'));
     }
-
 
     /**
      * ChatGPT API呼び出し
@@ -78,12 +76,8 @@ class ChatGptController extends Controller
             )->toModel();
 
             return $response->choices[0]->message->content;
-            // $response = $response->toArray();
-            // $response['choices'][0]['message']['content'];
-
         } catch (\Exception $e) {
             return "ERROR";
         }
     }
-
 }
