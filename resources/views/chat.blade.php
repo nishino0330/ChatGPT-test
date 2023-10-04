@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,6 +12,17 @@
         <textarea rows="10" cols="50" name="sentence">{{ isset($sentence) ? $sentence : '' }}</textarea>
         <button type="submit">ChatGPT</button>
     </form>
+
+    {{-- エラーメッセージ --}}
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 
     {{-- 結果 --}}
     {{ isset($chat_response) ? $chat_response : '' }}

@@ -28,6 +28,9 @@ class ChatGptController extends Controller
         // バリデーション
         $request->validate([
             'sentence' => 'required',
+        ], [
+            // カスタムエラーメッセージ
+            'sentence.required' => '文章を入力してください',
         ]);
 
         // 文章
@@ -64,6 +67,7 @@ class ChatGptController extends Controller
             ]
         );
 
+        // APIにリクエストを送信
         $openaiClient = \Tectalic\OpenAi\Manager::build(
             new \GuzzleHttp\Client(),
             new \Tectalic\OpenAi\Authentication($api_key)
