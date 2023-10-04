@@ -5,7 +5,7 @@ chatGPT api勉強用プロジェクト
 
 使い方
 テキストエリアに入力されたものに対してchatGPTが返答を返す
-openAIの公式ページ(https://chat.openai.com/)のようにログは残らないので深掘りの質問や対話はできない
+openAIの公式ページ (https://chat.openai.com/) のようにログは残らないので深掘りの質問や対話はできない
 
 例
 ユーザーの質問
