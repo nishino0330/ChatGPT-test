@@ -10,7 +10,7 @@
     <form method="POST">
         @csrf
         <textarea rows="10" cols="50" name="sentence">{{ isset($sentence) ? $sentence : '' }}</textarea>
-        <button type="submit">ChatGPT</button>
+        <button type="submit">送信</button>
     </form>
 
     {{-- エラーメッセージ --}}
