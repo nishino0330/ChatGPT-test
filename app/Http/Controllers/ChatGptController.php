@@ -25,14 +25,6 @@ class ChatGptController extends Controller
      */
     public function chat(Request $request)
     {
-        // バリデーション
-        $request->validate([
-            'sentence' => 'required',
-        ], [
-            // カスタムエラーメッセージ
-            'sentence.required' => '文章を入力してください',
-        ]);
-
         // 文章
         $sentence = $request->input('sentence');
 
